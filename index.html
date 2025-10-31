@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GitHub Documentation — Modern Guide</title>
+    <meta name="description" content="A clean, modern one-page site with information about GitHub Documentation. Built with Tailwind CSS." />
+
+    <!-- Tailwind CDN with small custom config for color palette -->
+    <script>
+      window.tailwind = {
+        config: {
+          theme: {
+            extend: {
+              colors: {
+                'brand-dark': '#071233',
+                'brand-blue': '#0F4C81',
+                'brand-sky': '#EAF4FF'
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      /* small utility to make code blocks look nice on dark bg */
+      pre code { white-space: pre-wrap; }
+    </style>
+  </head>
+  <body class="antialiased bg-brand-dark text-sky-100">
+    <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-brand-blue flex items-center justify-center ring-2 ring-white/10">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.86 8.16 6.84 9.49.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.61-3.37-1.34-3.37-1.34-.45-1.17-1.11-1.48-1.11-1.48-.91-.62.07-.61.07-.61 1.01.07 1.54 1.04 1.54 1.04.9 1.54 2.36 1.1 2.94.84.09-.66.35-1.1.64-1.35-2.22-.25-4.55-1.11-4.55-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.6 9.6 0 0112 6.8c.85.004 1.71.115 2.51.338 1.9-1.29 2.74-1.02 2.74-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.86 0 1.34-.01 2.42-.01 2.75 0 .27.18.59.69.49A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
+        </div>
+        <span class="font-semibold text-white">GitDocs</span>
+      </a>
+
+      <nav class="hidden md:flex gap-6 items-center text-sky-100/80">
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#features" class="hover:text-white">Features</a>
+        <a href="#pricing" class="hover:text-white">Pricing</a>
+        <a href="#faq" class="hover:text-white">FAQ</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="#" class="text-sm px-4 py-2 rounded-md border border-white/10 hover:bg-white/5">Sign in</a>
+        <a href="#get-started" class="hidden md:inline-block bg-white text-brand-blue font-semibold px-4 py-2 rounded-md shadow">Get started</a>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6">
+      <!-- HERO -->
+      <section class="mt-12 grid gap-8 md:grid-cols-2 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-white">GitHub Documentation — Learn & Build Faster</h1>
+          <p class="mt-4 text-sky-100/85 text-lg">Comprehensive guides, API references, and examples to help you ship faster with GitHub. Explore workflows, Actions, APIs and more.</p>
+
+          <div class="mt-6 flex flex-wrap gap-4">
+            <a href="#about" class="inline-flex items-center gap-2 bg-brand-blue text-white font-semibold px-5 py-3 rounded-md shadow hover:bg-brand-blue/90">Explore Docs</a>
+            <a href="#pricing" class="inline-flex items-center gap-2 border border-white/10 text-sky-100 px-5 py-3 rounded-md hover:bg-white/3">See pricing</a>
+          </div>
+
+          <div class="mt-8 flex gap-6 flex-wrap">
+            <div class="text-sm">
+              <div class="text-sky-100 font-semibold">120+</div>
+              <div class="text-sky-100/70">Guides & tutorials</div>
+            </div>
+            <div class="text-sm">
+              <div class="text-sky-100 font-semibold">API-first</div>
+              <div class="text-sky-100/70">Complete references</div>
+            </div>
+            <div class="text-sm">
+              <div class="text-sky-100 font-semibold">Examples</div>
+              <div class="text-sky-100/70">Quick start repos</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-brand-blue/30 to-white/5 rounded-xl p-6">
+          <div class="bg-white/5 rounded-lg p-4">
+            <h3 class="text-white font-semibold">Quick start</h3>
+            <p class="mt-2 text-sky-100/75">Create a repo, push your code, and link CI with Actions using these quick commands.</p>
+
+            <pre class="mt-4 bg-black/50 rounded-md p-4 text-sm text-brand-sky overflow-x-auto"><code>git init
+git add .
+git commit -m "initial"
+git branch -M main
+git remote add origin &lt;your-repo-url&gt;
+git push -u origin main</code></pre>
+
+            <div class="mt-4 flex gap-3">
+              <a href="#features" class="text-sm px-3 py-2 rounded-md bg-white/5">Read guides</a>
+              <a href="#" class="text-sm px-3 py-2 rounded-md border border-white/10">API reference</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="mt-16 bg-white/5 rounded-2xl p-8">
+        <div class="md:flex md:gap-8">
+          <div class="md:flex-1">
+            <h2 class="text-2xl font-bold text-white">About GitHub Documentation</h2>
+            <p class="mt-3 text-sky-100/80">GitHub Docs provides authoritative, up-to-date resources for developers and teams building on GitHub. It includes step-by-step tutorials, API references, and conceptual articles that cover platform features, best practices, and integrations.</p>
+          </div>
+
+          <div class="mt-6 md:mt-0 md:w-80">
+            <ul class="space-y-3 text-sky-100/85">
+              <li class="flex gap-3 items-start">
+                <div class="w-8 h-8 rounded-md bg-brand-blue flex items-center justify-center">📘</div>
+                <div>
+                  <div class="font-semibold">Guides & Tutorials</div>
+                  <div class="text-sm text-sky-100/70">From beginners to advanced flows.</div>
+                </div>
+              </li>
+              <li class="flex gap-3 items-start">
+                <div class="w-8 h-8 rounded-md bg-brand-blue flex items-center justify-center">⚙️</div>
+                <div>
+                  <div class="font-semibold">API Reference</div>
+                  <div class="text-sm text-sky-100/70">Complete REST & GraphQL docs.</div>
+                </div>
+              </li>
+              <li class="flex gap-3 items-start">
+                <div class="w-8 h-8 rounded-md bg-brand-blue flex items-center justify-center">🚀</div>
+                <div>
+                  <div class="font-semibold">Examples</div>
+                  <div class="text-sm text-sky-100/70">Real repo samples & code snippets.</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section id="features" class="mt-16 grid gap-6 md:grid-cols-3">
+        <div class="p-6 bg-white/3 rounded-lg">
+          <h4 class="font-semibold text-white">Workflows</h4>
+          <p class="mt-2 text-sky-100/80 text-sm">Step-by-step examples for Actions and CI/CD to automate your development lifecycle.</p>
+        </div>
+        <div class="p-6 bg-white/3 rounded-lg">
+          <h4 class="font-semibold text-white">Security</h4>
+          <p class="mt-2 text-sky-100/80 text-sm">Docs on scanning, code-analysis, and securing your supply chain.</p>
+        </div>
+        <div class="p-6 bg-white/3 rounded-lg">
+          <h4 class="font-semibold text-white">Integrations</h4>
+          <p class="mt-2 text-sky-100/80 text-sm">Connect with 3rd-party tools, cloud providers, and CI systems.</p>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section id="pricing" class="mt-16">
+        <div class="flex items-center justify-between">
+          <h2 class="text-2xl font-bold text-white">Pricing</h2>
+          <p class="text-sky-100/70">Plans for individuals, teams, and enterprises.</p>
+        </div>
+
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          <div class="p-6 bg-white/5 rounded-xl">
+            <div class="flex items-baseline gap-3">
+              <div class="text-3xl font-extrabold text-white">Free</div>
+              <div class="text-sm text-sky-100/70">forever</div>
+            </div>
+            <p class="mt-3 text-sky-100/80">Perfect to get started: public repos, community features.</p>
+            <ul class="mt-4 space-y-2 text-sky-100/80 text-sm">
+              <li>Unlimited public repos</li>
+              <li>Community support</li>
+              <li>Basic Actions minutes</li>
+            </ul>
+            <a class="mt-6 inline-block bg-transparent border border-white/10 px-4 py-2 rounded-md text-sky-100" href="#">Choose Free</a>
+          </div>
+
+          <div class="p-6 bg-gradient-to-br from-brand-blue to-brand-dark rounded-xl ring-1 ring-white/5">
+            <div class="flex items-baseline gap-3">
+              <div class="text-3xl font-extrabold text-white">Pro</div>
+              <div class="text-sm text-sky-100/80">$9 / mo</div>
+            </div>
+            <p class="mt-3 text-sky-100/80">For individuals who need private repos and more CI minutes.</p>
+            <ul class="mt-4 space-y-2 text-sky-100/80 text-sm">
+              <li>Private repos</li>
+              <li>Increased Actions minutes</li>
+              <li>Email support</li>
+            </ul>
+            <a class="mt-6 inline-block bg-white text-brand-blue font-semibold px-4 py-2 rounded-md" href="#">Get Pro</a>
+          </div>
+
+          <div class="p-6 bg-white/5 rounded-xl">
+            <div class="flex items-baseline gap-3">
+              <div class="text-3xl font-extrabold text-white">Enterprise</div>
+              <div class="text-sm text-sky-100/70">Custom</div>
+            </div>
+            <p class="mt-3 text-sky-100/80">Advanced security, SSO, and priority support for large teams.</p>
+            <ul class="mt-4 space-y-2 text-sky-100/80 text-sm">
+              <li>SSO & SAML</li>
+              <li>Audit logs</li>
+              <li>Dedicated support</li>
+            </ul>
+            <a class="mt-6 inline-block bg-transparent border border-white/10 px-4 py-2 rounded-md text-sky-100" href="#">Contact sales</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="mt-16 bg-white/5 p-8 rounded-2xl">
+        <h3 class="text-xl font-semibold text-white">FAQ</h3>
+        <div class="mt-4 space-y-4">
+          <details class="bg-white/3 p-4 rounded-md">
+            <summary class="cursor-pointer font-medium">Where can I find the API docs?</summary>
+            <p class="mt-2 text-sky-100/80 text-sm">The API documentation is available in the API reference section with examples for REST and GraphQL endpoints.</p>
+          </details>
+          <details class="bg-white/3 p-4 rounded-md">
+            <summary class="cursor-pointer font-medium">Do you provide examples?</summary>
+            <p class="mt-2 text-sky-100/80 text-sm">Yes — each guide includes quick-start examples and repo links to get you running fast.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section id="get-started" class="mt-16 bg-gradient-to-r from-brand-blue/20 to-white/3 rounded-lg p-8 text-center">
+        <h4 class="text-2xl font-bold text-white">Ready to explore the docs?</h4>
+        <p class="mt-2 text-sky-100/80">Browse tutorials, API references, and examples curated for developers.</p>
+        <div class="mt-4">
+          <a href="#about" class="inline-block bg-white text-brand-blue font-semibold px-6 py-3 rounded-md">Start reading</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-16 border-t border-white/5 py-8 text-sky-100/70">
+      <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div>© <span id="year"></span> GitDocs • Built with Tailwind</div>
+        <div class="flex gap-4">
+          <a href="#" class="hover:underline">Privacy</a>
+          <a href="#" class="hover:underline">Terms</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // small runtime touches
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
