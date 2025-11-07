@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="ro">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Documentația GitHub — Ghid Modern</title>
-    <meta name="description" content="Un site modern, cu o pagină unică, care oferă informații despre documentația GitHub. Creat cu Tailwind CSS." />
+    <title>GitHub Documentation — Modern Guide</title>
+    <meta name="description" content="A clean, modern one-page site with information about GitHub Documentation. Built with Tailwind CSS." />
 
+    <!-- Tailwind CDN with small custom config for color palette -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       window.tailwind = {
@@ -22,10 +23,13 @@
         }
       }
     </script>
+    
 
     <style>
+      /* small utility to make code blocks look nice on dark bg */
       pre code { white-space: pre-wrap; }
 
+      /* --- Quick start animation styles --- */
       .terminal-wrap { position: relative; overflow: hidden; }
       .terminal-bg-anim { position: absolute; inset:0; border-radius: .75rem; z-index:0; background: linear-gradient(120deg, rgba(15,76,129,0.12), rgba(43,27,74,0.06)); pointer-events:none; }
       @keyframes bgPulse { 0% { background-position:0% 50%; } 50% { background-position:100% 50%; } 100% { background-position:0% 50%; } }
@@ -38,14 +42,17 @@
       .cursor { display:inline-block; width:10px; height:1em; background:currentColor; margin-left:6px; vertical-align:bottom; animation: blink 1s steps(2,end) infinite; }
       @keyframes blink { 50% { opacity: 0 } }
 
+  /* visual effect elements (removed) */
+
+      /* final flash */
       .terminal-flash { animation: flash 420ms ease-in-out; }
       @keyframes flash { 0% { box-shadow: none } 50% { box-shadow: 0 0 24px rgba(100,255,218,.85); } 100% { box-shadow: none } }
 
+      /* pulse heading */
       .pulse { animation: pulseSuccess 420ms ease-in-out; }
       @keyframes pulseSuccess { 0% { transform: none } 50% { transform: scale(1.02) } 100% { transform: none } }
     </style>
   </head>
-
   <body class="antialiased bg-brand-dark text-sky-100">
     <header class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3">
@@ -56,43 +63,42 @@
       </a>
 
       <nav class="hidden md:flex gap-6 items-center text-sky-100/80">
-        <a href="#about" class="hover:text-white">Despre</a>
-        <a href="#features" class="hover:text-white">Funcționalități</a>
-        <a href="#projects" class="hover:text-white">Resurse rapide</a>
-        <a href="#faq" class="hover:text-white">Întrebări frecvente</a>
+        <a href="#about" class="hover:text-white">About</a>
+        <a href="#features" class="hover:text-white">Features</a>
+        <a href="#pricing" class="hover:text-white">Pricing</a>
+        <a href="#faq" class="hover:text-white">FAQ</a>
       </nav>
 
       <div class="flex items-center gap-3">
-        <a href="#" class="text-sm px-4 py-2 rounded-md border border-white/10 hover:bg-white/5">Autentificare</a>
-        <a href="#get-started" class="hidden md:inline-block bg-white text-brand-blue font-semibold px-4 py-2 rounded-md shadow">Începe acum</a>
+        <a href="#" class="text-sm px-4 py-2 rounded-md border border-white/10 hover:bg-white/5">Sign in</a>
+        <a href="#get-started" class="hidden md:inline-block bg-white text-brand-blue font-semibold px-4 py-2 rounded-md shadow">Get started</a>
       </div>
     </header>
 
     <main class="max-w-6xl mx-auto px-6">
-
-      <!-- SECȚIUNEA PRINCIPALĂ -->
-      <section class="mt-12 grid gap-8 md:grid-cols-2 items-start">
+  <!-- HERO -->
+  <section class="mt-12 grid gap-8 md:grid-cols-2 items-start">
         <div>
-          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-white">Documentația GitHub — Învață și dezvoltă mai rapid</h1>
-          <p class="mt-4 text-sky-100/85 text-lg">Ghiduri complete, referințe API și exemple care te ajută să lucrezi mai eficient cu GitHub. Explorează fluxuri de lucru, GitHub Actions, API-uri și multe altele.</p>
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-white">GitHub Documentation — Learn & Build Faster</h1>
+          <p class="mt-4 text-sky-100/85 text-lg">Comprehensive guides, API references, and examples to help you ship faster with GitHub. Explore workflows, Actions, APIs and more.</p>
 
           <div class="mt-6 flex flex-wrap gap-4">
-            <a href="#about" class="inline-flex items-center gap-2 bg-brand-blue text-white font-semibold px-5 py-3 rounded-md shadow hover:bg-brand-blue/90">Explorează documentația</a>
-            <a href="#projects" class="inline-flex items-center gap-2 border border-white/10 text-sky-100 px-5 py-3 rounded-md hover:bg-white/3">Vezi resursele</a>
+            <a href="#about" class="inline-flex items-center gap-2 bg-brand-blue text-white font-semibold px-5 py-3 rounded-md shadow hover:bg-brand-blue/90">Explore Docs</a>
+            <a href="#pricing" class="inline-flex items-center gap-2 border border-white/10 text-sky-100 px-5 py-3 rounded-md hover:bg-white/3">See pricing</a>
           </div>
 
           <div class="mt-8 flex gap-6 flex-wrap">
             <div class="text-sm">
               <div class="text-sky-100 font-semibold">120+</div>
-              <div class="text-sky-100/70">Ghiduri și tutoriale</div>
+              <div class="text-sky-100/70">Guides & tutorials</div>
             </div>
             <div class="text-sm">
               <div class="text-sky-100 font-semibold">API-first</div>
-              <div class="text-sky-100/70">Referințe complete</div>
+              <div class="text-sky-100/70">Complete references</div>
             </div>
             <div class="text-sm">
-              <div class="text-sky-100 font-semibold">Exemple</div>
-              <div class="text-sky-100/70">Repozitoare de pornire rapidă</div>
+              <div class="text-sky-100 font-semibold">Examples</div>
+              <div class="text-sky-100/70">Quick start repos</div>
             </div>
           </div>
         </div>
@@ -100,106 +106,283 @@
         <div class="bg-gradient-to-br from-brand-blue/30 to-white/5 rounded-xl p-6 terminal-wrap">
           <div class="terminal-bg-anim pulse"></div>
           <div class="bg-white/5 rounded-lg p-4 terminal">
-            <h3 id="quick-title" class="text-white font-semibold">Pornire rapidă</h3>
-            <p id="quick-sub" class="mt-2 text-sky-100/75">Creează un depozit (repository), încarcă codul și conectează CI cu GitHub Actions folosind aceste comenzi rapide.</p>
+            <h3 id="quick-title" class="text-white font-semibold">Quick start</h3>
+            <p id="quick-sub" class="mt-2 text-sky-100/75">Create a repo, push your code, and link CI with Actions using these quick commands.</p>
 
             <pre class="mt-4 bg-black/50 rounded-md p-4 text-sm text-brand-sky overflow-x-auto relative"><code id="quick-code">
 <div class="cmd" data-full="git init"></div>
 <div class="cmd" data-full="git add ."></div>
 <div class="cmd" data-full="git commit -m &quot;initial&quot;"></div>
 <div class="cmd" data-full="git branch -M main"></div>
-<div class="cmd" data-full="git remote add origin &lt;adresa-repozitoriu&gt;"></div>
+<div class="cmd" data-full="git remote add origin &lt;your-repo-url&gt;"></div>
 <div class="cmd" data-full="git push -u origin main"></div></code>
 </pre>
             <div class="mt-4 flex gap-3">
-              <a href="#features" class="text-sm px-3 py-2 rounded-md bg-white/5">Citește ghidurile</a>
-              <a href="#" class="text-sm px-3 py-2 rounded-md border border-white/10">Referință API</a>
+              <a href="#features" class="text-sm px-3 py-2 rounded-md bg-white/5">Read guides</a>
+              <a href="#" class="text-sm px-3 py-2 rounded-md border border-white/10">API reference</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- DESPRE -->
+      <!-- ABOUT -->
       <section id="about" class="mt-16 bg-white/5 rounded-2xl p-8">
         <div class="md:flex md:gap-8">
           <div class="md:flex-1">
-            <h2 class="text-2xl font-bold text-white">Despre documentația GitHub</h2>
-            <p class="mt-3 text-sky-100/80">GitHub Docs oferă resurse actualizate pentru dezvoltatori și echipe care lucrează pe platforma GitHub. Include tutoriale pas cu pas, referințe API și articole explicative despre funcționalități, bune practici și integrare.</p>
+            <h2 class="text-2xl font-bold text-white">About GitHub Documentation</h2>
+            <p class="mt-3 text-sky-100/80">GitHub Docs provides authoritative, up-to-date resources for developers and teams building on GitHub. It includes step-by-step tutorials, API references, and conceptual articles that cover platform features, best practices, and integrations.</p>
+          </div>
+
+          <div class="mt-6 md:mt-0 md:w-80">
+            <ul class="space-y-3 text-sky-100/85">
+              <li class="flex gap-3 items-start">
+                <div class="w-8 h-8 rounded-md bg-brand-blue flex items-center justify-center">📘</div>
+                <div>
+                  <div class="font-semibold">Guides & Tutorials</div>
+                  <div class="text-sm text-sky-100/70">From beginners to advanced flows.</div>
+                </div>
+              </li>
+              <li class="flex gap-3 items-start">
+                <div class="w-8 h-8 rounded-md bg-brand-blue flex items-center justify-center">⚙️</div>
+                <div>
+                  <div class="font-semibold">API Reference</div>
+                  <div class="text-sm text-sky-100/70">Complete REST & GraphQL docs.</div>
+                </div>
+              </li>
+              <li class="flex gap-3 items-start">
+                <div class="w-8 h-8 rounded-md bg-brand-blue flex items-center justify-center">🚀</div>
+                <div>
+                  <div class="font-semibold">Examples</div>
+                  <div class="text-sm text-sky-100/70">Real repo samples & code snippets.</div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <!-- FUNCȚIONALITĂȚI -->
+      <!-- FEATURES -->
       <section id="features" class="mt-16 grid gap-6 md:grid-cols-3">
         <div class="p-6 bg-white/3 rounded-lg">
-          <h4 class="font-semibold text-white">Fluxuri de lucru</h4>
-          <p class="mt-2 text-sky-100/80 text-sm">Exemple pas cu pas pentru GitHub Actions și CI/CD, pentru a automatiza ciclul de dezvoltare.</p>
+          <h4 class="font-semibold text-white">Workflows</h4>
+          <p class="mt-2 text-sky-100/80 text-sm">Step-by-step examples for Actions and CI/CD to automate your development lifecycle.</p>
         </div>
         <div class="p-6 bg-white/3 rounded-lg">
-          <h4 class="font-semibold text-white">Securitate</h4>
-          <p class="mt-2 text-sky-100/80 text-sm">Documente despre scanarea codului, analiza de securitate și protejarea lanțului de aprovizionare software.</p>
+          <h4 class="font-semibold text-white">Security</h4>
+          <p class="mt-2 text-sky-100/80 text-sm">Docs on scanning, code-analysis, and securing your supply chain.</p>
         </div>
         <div class="p-6 bg-white/3 rounded-lg">
-          <h4 class="font-semibold text-white">Integrare</h4>
-          <p class="mt-2 text-sky-100/80 text-sm">Conectează-te cu instrumente externe, furnizori cloud și sisteme CI.</p>
+          <h4 class="font-semibold text-white">Integrations</h4>
+          <p class="mt-2 text-sky-100/80 text-sm">Connect with 3rd-party tools, cloud providers, and CI systems.</p>
         </div>
       </section>
 
-      <!-- RESURSE RAPIDE -->
+      <!-- PROJECTS (GitHub Projects links) -->
       <section id="projects" class="mt-12 bg-white/5 p-8 rounded-2xl">
-        <h3 class="text-2xl font-bold text-white">GitHub Projects — Resurse rapide</h3>
-        <p class="mt-2 text-sky-100/80">Mai jos găsești resurse detaliate despre lucrul cu GitHub Projects, un instrument puternic pentru organizarea și urmărirea muncii în echipă.</p>
+        <h3 class="text-2xl font-bold text-white">GitHub Projects — resurse rapide</h3>
+        <p class="mt-2 text-sky-100/80">Patru articole cheie despre GitHub Projects: definiții, pași de creare, copierea proiectelor și migrarea din Projects (classic).</p>
 
-        <article class="mt-6 p-6 bg-white/3 rounded-lg">
-          <h4 class="font-semibold text-white text-xl">1. Despre GitHub Projects</h4>
-          <p class="mt-3 text-sky-100/80 text-sm">GitHub Projects este o unealtă flexibilă de planificare și urmărire a sarcinilor. Poți crea panouri dinamice pentru probleme (issues), pull request-uri și note. Structura poate fi personalizată prin câmpuri, filtre și automatizări.</p>
-          <p class="mt-2 text-sky-100/70 text-sm">Proiectele pot fi folosite pentru managementul echipelor, roadmap-uri, sprinturi sau urmărirea progresului pentru funcționalități individuale.</p>
-          <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects" target="_blank" class="inline-block mt-4 bg-brand-blue text-white px-4 py-2 rounded-md">Citește mai mult</a>
-        </article>
+        <dl class="mt-6 grid gap-4 md:grid-cols-2">
+          <div class="p-4 bg-white/3 rounded-lg">
+            <dt class="font-semibold text-white">Despre Projects</dt>
+            <dd class="mt-2 text-sky-100/80 text-sm">GitHub Projects este un instrument flexibil pentru planificare și urmărire a muncii. Poți folosi tabele, panouri și automatizări pentru a organiza issues, pull requests și note într-un workflow clar.</dd>
+            <div class="mt-4">
+              <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects?authuser=0" target="_blank" rel="noopener" class="inline-block text-sm bg-brand-blue text-white px-3 py-2 rounded-md">Citește pagina</a>
+            </div>
+          </div>
 
-        <article class="mt-6 p-6 bg-white/3 rounded-lg">
-          <h4 class="font-semibold text-white text-xl">2. Crearea unui proiect nou</h4>
-          <p class="mt-3 text-sky-100/80 text-sm">Pentru a crea un proiect, poți alege dacă va fi la nivel de utilizator, organizație sau repository. Selectează un șablon (template), configurează câmpurile, apoi adaugă elemente (items) cum ar fi probleme sau pull request-uri.</p>
-          <p class="mt-2 text-sky-100/70 text-sm">Poți adăuga automatizări, reguli de sortare și vederi (views) pentru o mai bună vizualizare a progresului.</p>
-          <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/creating-a-project" target="_blank" class="inline-block mt-4 bg-brand-blue text-white px-4 py-2 rounded-md">Vezi ghidul complet</a>
-        </article>
+          <div class="p-4 bg-white/3 rounded-lg">
+            <dt class="font-semibold text-white">Crearea unui proiect</dt>
+            <dd class="mt-2 text-sky-100/80 text-sm">Ghid pas-cu-pas pentru a crea un proiect (la nivel de repository, organizație sau utilizator). Include alegerea unui template, configurarea câmpurilor și adăugarea elementelor (items).</dd>
+            <div class="mt-4">
+              <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/creating-a-project?authuser=0" target="_blank" rel="noopener" class="inline-block text-sm bg-brand-blue text-white px-3 py-2 rounded-md">Citește pagina</a>
+            </div>
+          </div>
 
-        <article class="mt-6 p-6 bg-white/3 rounded-lg">
-          <h4 class="font-semibold text-white text-xl">3. Copierea unui proiect existent</h4>
-          <p class="mt-3 text-sky-100/80 text-sm">GitHub îți permite să copiezi un proiect existent pentru a-l folosi ca bază. Poți duplica coloane, câmpuri personalizate și, opțional, elementele din proiectul original.</p>
-          <p class="mt-2 text-sky-100/70 text-sm">Această funcție este ideală pentru echipe care repetă aceleași procese (ex. sprinturi lunare) și doresc o structură consistentă.</p>
-          <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/copying-an-existing-project" target="_blank" class="inline-block mt-4 bg-brand-blue text-white px-4 py-2 rounded-md">Citește mai mult</a>
-        </article>
+          <div class="p-4 bg-white/3 rounded-lg">
+            <dt class="font-semibold text-white">Copierea unui proiect existent</dt>
+            <dd class="mt-2 text-sky-100/80 text-sm">Cum poți copia structura unui proiect existent pentru a o reutiliza: opțiuni disponibile pentru a duplica coloane, câmpuri, și (opțional) elementele proiectului.</dd>
+            <div class="mt-4">
+              <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/copying-an-existing-project?authuser=0" target="_blank" rel="noopener" class="inline-block text-sm bg-brand-blue text-white px-3 py-2 rounded-md">Citește pagina</a>
+            </div>
+          </div>
 
-        <article class="mt-6 p-6 bg-white/3 rounded-lg">
-          <h4 class="font-semibold text-white text-xl">4. Migrarea din Projects (classic)</h4>
-          <p class="mt-3 text-sky-100/80 text-sm">Dacă ai folosit vechiul sistem „Projects (classic)”, poți migra cu ușurință la noul format. Ghidul oficial explică cum să mapezi coloanele, să imporți datele și să păstrezi fluxul existent de lucru.</p>
-          <p class="mt-2 text-sky-100/70 text-sm">Noul sistem oferă funcționalități moderne: automatizări îmbunătățite, câmpuri personalizate și o integrare mai bună cu GitHub Actions.</p>
-          <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/migrating-from-projects-classic" target="_blank" class="inline-block mt-4 bg-brand-blue text-white px-4 py-2 rounded-md">Vezi instrucțiunile complete</a>
-        </article>
+          <div class="p-4 bg-white/3 rounded-lg">
+            <dt class="font-semibold text-white">Migrarea din Projects (classic)</dt>
+            <dd class="mt-2 text-sky-100/80 text-sm">Pași și recomandări pentru a migra proiecte din vechiul format Projects (classic) către noua experiență Projects — incluzând maparea coloanelor și importul datelor.</dd>
+            <div class="mt-4">
+              <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/migrating-from-projects-classic?authuser=0" target="_blank" rel="noopener" class="inline-block text-sm bg-brand-blue text-white px-3 py-2 rounded-md">Citește pagina</a>
+            </div>
+          </div>
+        </dl>
       </section>
 
-      <!-- ÎNTREBĂRI FRECVENTE -->
+      <!-- PRICING -->
+      <section id="pricing" class="mt-16">
+        <div class="flex items-center justify-between">
+          <h2 class="text-2xl font-bold text-white">Pricing</h2>
+          <p class="text-sky-100/70">Plans for individuals, teams, and enterprises.</p>
+        </div>
+
+        <div class="mt-6 grid gap-6 md:grid-cols-3">
+          <div class="p-6 bg-white/5 rounded-xl">
+            <div class="flex items-baseline gap-3">
+              <div class="text-3xl font-extrabold text-white">Free</div>
+              <div class="text-sm text-sky-100/70">forever</div>
+            </div>
+            <p class="mt-3 text-sky-100/80">Perfect to get started: public repos, community features.</p>
+            <ul class="mt-4 space-y-2 text-sky-100/80 text-sm">
+              <li>Unlimited public repos</li>
+              <li>Community support</li>
+              <li>Basic Actions minutes</li>
+            </ul>
+            <a class="mt-6 inline-block bg-transparent border border-white/10 px-4 py-2 rounded-md text-sky-100" href="#">Choose Free</a>
+          </div>
+
+          <div class="p-6 bg-gradient-to-br from-brand-blue to-brand-dark rounded-xl ring-1 ring-white/5">
+            <div class="flex items-baseline gap-3">
+              <div class="text-3xl font-extrabold text-white">Pro</div>
+              <div class="text-sm text-sky-100/80">$9 / mo</div>
+            </div>
+            <p class="mt-3 text-sky-100/80">For individuals who need private repos and more CI minutes.</p>
+            <ul class="mt-4 space-y-2 text-sky-100/80 text-sm">
+              <li>Private repos</li>
+              <li>Increased Actions minutes</li>
+              <li>Email support</li>
+            </ul>
+            <a class="mt-6 inline-block bg-white text-brand-blue font-semibold px-4 py-2 rounded-md" href="#">Get Pro</a>
+          </div>
+
+          <div class="p-6 bg-white/5 rounded-xl">
+            <div class="flex items-baseline gap-3">
+              <div class="text-3xl font-extrabold text-white">Enterprise</div>
+              <div class="text-sm text-sky-100/70">Custom</div>
+            </div>
+            <p class="mt-3 text-sky-100/80">Advanced security, SSO, and priority support for large teams.</p>
+            <ul class="mt-4 space-y-2 text-sky-100/80 text-sm">
+              <li>SSO & SAML</li>
+              <li>Audit logs</li>
+              <li>Dedicated support</li>
+            </ul>
+            <a class="mt-6 inline-block bg-transparent border border-white/10 px-4 py-2 rounded-md text-sky-100" href="#">Contact sales</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
       <section id="faq" class="mt-16 bg-white/5 p-8 rounded-2xl">
-        <h3 class="text-xl font-semibold text-white">Întrebări frecvente</h3>
+        <h3 class="text-xl font-semibold text-white">FAQ</h3>
         <div class="mt-4 space-y-4">
           <details class="bg-white/3 p-4 rounded-md">
-            <summary class="cursor-pointer font-medium">Unde pot găsi documentația API?</summary>
-            <p class="mt-2 text-sky-100/80 text-sm">Documentația completă pentru API este disponibilă în secțiunea „Referință API”, cu exemple pentru REST și GraphQL.</p>
+            <summary class="cursor-pointer font-medium">Where can I find the API docs?</summary>
+            <p class="mt-2 text-sky-100/80 text-sm">The API documentation is available in the API reference section with examples for REST and GraphQL endpoints.</p>
           </details>
           <details class="bg-white/3 p-4 rounded-md">
-            <summary class="cursor-pointer font-medium">Oferiți exemple practice?</summary>
-            <p class="mt-2 text-sky-100/80 text-sm">Da. Există numeroase exemple în ghiduri, precum și repo-uri demonstrative care pot fi clononate pentru testare.</p>
+            <summary class="cursor-pointer font-medium">Do you provide examples?</summary>
+            <p class="mt-2 text-sky-100/80 text-sm">Yes — each guide includes quick-start examples and repo links to get you running fast.</p>
           </details>
         </div>
       </section>
 
+      <!-- CTA -->
+      <section id="get-started" class="mt-16 bg-gradient-to-r from-brand-blue/20 to-white/3 rounded-lg p-8 text-center">
+        <h4 class="text-2xl font-bold text-white">Ready to explore the docs?</h4>
+        <p class="mt-2 text-sky-100/80">Browse tutorials, API references, and examples curated for developers.</p>
+        <div class="mt-4">
+          <a href="#about" class="inline-block bg-white text-brand-blue font-semibold px-6 py-3 rounded-md">Start reading</a>
+        </div>
+      </section>
     </main>
 
-    <footer class="mt-16 py-8 text-center text-sky-100/60 border-t border-white/10">
-      <p>© 2025 GitDocs. Construit cu ❤️ pentru dezvoltatori.</p>
+    <footer class="mt-16 border-t border-white/5 py-8 text-sky-100/70">
+      <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div>© <span id="year"></span> GitDocs • Built with Tailwind</div>
+        <div class="flex gap-4">
+          <a href="#" class="hover:underline">Privacy</a>
+          <a href="#" class="hover:underline">Terms</a>
+        </div>
+      </div>
     </footer>
 
-    <script> // small runtime touches document.getElementById('year').textContent = new Date().getFullYear(); // Quick start animation sequence (function(){ const cmds = Array.from(document.querySelectorAll('#quick-code .cmd')); // visual effect elements removed const container = document.querySelector('.terminal'); const title = document.getElementById('quick-title'); const subtitle = document.getElementById('quick-sub'); // initialize: store full text and clear cmds.forEach(c => { c.dataset.full = c.dataset.full || c.textContent.trim(); c.textContent = ''; }); function typeText(el, speed=30){ return new Promise(resolve=>{ const txt = el.dataset.full || ''; let i=0; el.classList.add('active'); const cur = document.createElement('span'); cur.className='cursor'; el.appendChild(cur); const t = setInterval(()=>{ if(i<txt.length){ // insert before cursor cur.remove(); el.textContent = txt.slice(0,i+1); el.appendChild(cur); i++; } else { clearInterval(t); cur.remove(); el.classList.add('done'); resolve(); } }, speed); }); } // removed: showEffect and packet animation (visual effects were removed) async function run(){ // small idle pulse on bg document.querySelector('.terminal-bg-anim').classList.add('pulse'); // Step 1: git init (snow) await typeText(cmds[0], 40); // visual effect removed await new Promise(r=>setTimeout(r,200)); // Step 2: git add . + commit (typed consecutively fast) await typeText(cmds[1], 25); await new Promise(r=>setTimeout(r,80)); await typeText(cmds[2], 18); // visual effect removed await new Promise(r=>setTimeout(r,200)); // Step 3: branch await typeText(cmds[3], 30); // visual effect removed await new Promise(r=>setTimeout(r,240)); // Step 4: remote add -> anchor effect await typeText(cmds[4], 24); // visual effect removed await new Promise(r=>setTimeout(r,200)); // Step 5: push -> packets fly to anchor and final flash await typeText(cmds[5], 36); // packet animation removed // flash terminal and pulse heading container.classList.add('terminal-flash'); title.classList.add('pulse'); subtitle.classList.add('pulse'); setTimeout(()=>{ container.classList.remove('terminal-flash'); title.classList.remove('pulse'); subtitle.classList.remove('pulse'); }, 700); } // run after small delay so layout settled setTimeout(run, 900); })(); </script>
+    <script>
+      // small runtime touches
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Quick start animation sequence
+      (function(){
+        const cmds = Array.from(document.querySelectorAll('#quick-code .cmd'));
+  // visual effect elements removed
+        const container = document.querySelector('.terminal');
+        const title = document.getElementById('quick-title');
+        const subtitle = document.getElementById('quick-sub');
+
+        // initialize: store full text and clear
+        cmds.forEach(c => { c.dataset.full = c.dataset.full || c.textContent.trim(); c.textContent = ''; });
+
+        function typeText(el, speed=30){
+          return new Promise(resolve=>{
+            const txt = el.dataset.full || '';
+            let i=0;
+            el.classList.add('active');
+            const cur = document.createElement('span'); cur.className='cursor';
+            el.appendChild(cur);
+            const t = setInterval(()=>{
+              if(i<txt.length){
+                // insert before cursor
+                cur.remove();
+                el.textContent = txt.slice(0,i+1);
+                el.appendChild(cur);
+                i++;
+              } else {
+                clearInterval(t);
+                cur.remove();
+                el.classList.add('done');
+                resolve();
+              }
+            }, speed);
+          });
+        }
+
+        // removed: showEffect and packet animation (visual effects were removed)
+
+        async function run(){
+          // small idle pulse on bg
+          document.querySelector('.terminal-bg-anim').classList.add('pulse');
+
+          // Step 1: git init (snow)
+          await typeText(cmds[0], 40);
+          // visual effect removed
+          await new Promise(r=>setTimeout(r,200));
+
+          // Step 2: git add . + commit (typed consecutively fast)
+          await typeText(cmds[1], 25);
+          await new Promise(r=>setTimeout(r,80));
+          await typeText(cmds[2], 18);
+          // visual effect removed
+          await new Promise(r=>setTimeout(r,200));
+
+          // Step 3: branch
+          await typeText(cmds[3], 30);
+          // visual effect removed
+          await new Promise(r=>setTimeout(r,240));
+
+          // Step 4: remote add -> anchor effect
+          await typeText(cmds[4], 24);
+          // visual effect removed
+          await new Promise(r=>setTimeout(r,200));
+
+          // Step 5: push -> packets fly to anchor and final flash
+          await typeText(cmds[5], 36);
+          // packet animation removed
+          // flash terminal and pulse heading
+          container.classList.add('terminal-flash');
+          title.classList.add('pulse'); subtitle.classList.add('pulse');
+          setTimeout(()=>{ container.classList.remove('terminal-flash'); title.classList.remove('pulse'); subtitle.classList.remove('pulse'); }, 700);
+        }
+
+        // run after small delay so layout settled
+        setTimeout(run, 900);
+      })();
+    </script>
   </body>
 </html>
