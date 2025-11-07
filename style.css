@@ -1,0 +1,77 @@
+/* Stil general pentru site-ul Git & GitHub */
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top left, #0f172a, #020617);
+  color: #e2e8f0;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: rgba(15, 23, 42, 0.8);
+  border-bottom: 1px solid #1e293b;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  color: #38bdf8;
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #94a3b8;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(30, 41, 59, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  color: #38bdf8;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 8px;
+}
+
+code {
+  background: #1e293b;
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: #93c5fd;
+  font-family: monospace;
+}
+
+pre {
+  background: #0f172a;
+  padding: 12px;
+  border-radius: 10px;
+  overflow-x: auto;
+  color: #e2e8f0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #64748b;
+  font-size: 0.9rem;
+  border-top: 1px solid #1e293b;
+  margin-top: 50px;
+}
