@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucru în echipă cu Git & GitHub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Lucru în echipă cu Git & GitHub</h1>
+    <nav>
+      <a href="index.html">Acasă</a>
+      <a href="git-intro.html">Despre Git</a>
+      <a href="git-proiecte.html">Proiecte</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Colaborare prin GitHub</h2>
+    <p>Lucrul în echipă implică utilizarea branch-urilor, pull requests și review-uri de cod.</p>
+
+    <h3>Crearea unui branch:</h3>
+    <pre><code>git checkout -b fix-bug-123</code></pre>
+
+    <h3>Trimiterea modificărilor pe GitHub:</h3>
+    <pre><code>git push origin fix-bug-123</code></pre>
+
+    <h2>Pull Request</h2>
+    <p>Pe GitHub, deschizi un Pull Request (PR) pentru ca ceilalți membri să revizuiască codul tău înainte de a-l integra în <code>main</code>.</p>
+
+    <h2>Rezolvarea conflictelor</h2>
+    <pre><code>git merge main
+# Dacă apar conflicte, editează fișierele și apoi:
+git add .
+git commit</code></pre>
+
+    <h2>Actualizarea locală a proiectului</h2>
+    <pre><code>git pull origin main</code></pre>
+
+    <p>Lucrul colaborativ eficient se bazează pe comunicare și commit-uri clare.</p>
+  </main>
+
+  <footer>
+    © 2025 Ghid Git & GitHub
+  </footer>
+</body>
+</html>
