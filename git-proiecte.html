@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git & GitHub pentru proiecte</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Git & GitHub pentru proiecte</h1>
+    <nav>
+      <a href="index.html">Acasă</a>
+      <a href="git-intro.html">Despre Git</a>
+      <a href="git-echipa.html">Lucru în echipă</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Crearea unui nou proiect Git</h2>
+    <pre><code>mkdir proiect-nou
+cd proiect-nou
+git init</code></pre>
+
+    <h3>Adăugarea și commit-ul fișierelor:</h3>
+    <pre><code>git add .
+git commit -m "Inițializare proiect"</code></pre>
+
+    <h3>Conectarea la GitHub:</h3>
+    <pre><code>git remote add origin https://github.com/utilizator/proiect-nou.git
+git push -u origin main</code></pre>
+
+    <h2>Urmărirea versiunilor</h2>
+    <pre><code>git log</code></pre>
+
+    <h2>Crearea unei ramuri noi:</h2>
+    <pre><code>git checkout -b feature-autentificare</code></pre>
+
+    <p>Ramurile (branches) sunt esențiale pentru a dezvolta funcționalități fără a afecta codul principal.</p>
+  </main>
+
+  <footer>
+    © 2025 Ghid Git & GitHub
+  </footer>
+</body>
+</html>
