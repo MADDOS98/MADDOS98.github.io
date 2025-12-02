@@ -1,0 +1,130 @@
+:root {
+    --bg-color: #0B1120;       /* Albastru foarte închis (aproape negru) */
+    --card-bg: #1e293b;        /* Un albastru puțin mai deschis pentru contrast */
+    --accent-white: #ffffff;   /* Alb pur */
+    --spine-color: #f1f5f9;    /* Alb-gri pentru cotorul cărții */
+    --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
+    color: var(--accent-white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Header --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background: linear-gradient(to bottom, #0f172a, transparent);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--accent-white);
+}
+
+/* --- Buton Modern --- */
+.btn-primary {
+    background-color: transparent;
+    color: var(--accent-white);
+    border: 1px solid var(--accent-white);
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-white);
+    color: var(--bg-color);
+}
+
+/* --- Grid Albume --- */
+main {
+    flex: 1;
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    width: 100%;
+    max-width: 1400px;
+    padding-bottom: 4rem;
+}
+
+/* --- Stilul Albumului (Efect 3D) --- */
+.album-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Pătrat */
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    perspective: 1000px;
+}
+
+/* Containerul interior care ține imaginea și cotorul */
+.album-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--accent-white);
+    border-radius: 4px 12px 12px 4px; /* Rotunjit la dreapta */
+    box-shadow: 
+        10px 15px 30px var(--shadow-color),
+        inset 5px 0 10px rgba(0,0,0,0.1); /* Umbră interioară pentru realism */
+    overflow: hidden;
+    transform-style: preserve-3d;
+    transform: rotateY(-15deg) rotateX(5deg); /* Efect izometric subtil */
+    transition: transform 0.4s ease;
+}
+
+/* Cotorul albumului (stânga) */
+.album-inner::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 18px;
+    background: linear-gradient(to right, #e2e8f0, #ffffff, #cbd5e1);
+    z-index: 2;
+    border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Imaginea */
+.album-inner img {
+    position: absolute;
+    top: 0;
+    left: 18px; /* Lăsăm loc pentru cotor */
+    width: calc(100% - 18px);
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(10%) contrast(110%); /* Filtru subtil pentru aspect modern */
+}
+
+/* Efecte Hover */
+.album-card:hover .album-inner {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
